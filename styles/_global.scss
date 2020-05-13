@@ -1,3 +1,20 @@
+//Colors 
+
+$color-primary: #15115B;
+$color-purple: #5620F3;
+$color-pink: #E93061;
+$color-yellow: #F4B939;
+$color-grey: #E8E7E9;
+$color-white: #fff;
+$color-black: #000;
+
+//fonts
+
+$text: 1.5rem;
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
 
 @font-face {
     font-family: "Neue-regular";
@@ -9,10 +26,16 @@
   }
   @font-face {
     font-family: "Neue-bold";
-    
+
     src: url("/fonts/Neue-bold.ttf");
   }
 
+  @mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+  }
 
 //Global Styles 
 * {
@@ -27,9 +50,15 @@ html {
 body {
 font-family: "Neue-bold",sans-serif;
 }
-@mixin flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // flex-direction: $direction;
+
+//buttons
+
+.btn-main {
+  width: 100%;
+  padding: 4rem 2rem;
+  // border-radius: 50%;
+  color: $color-white;
+  background-color: $color-pink;
+  text-decoration: none;
+  cursor: pointer;
 }

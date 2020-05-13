@@ -1,0 +1,39 @@
+//Navigation
+.header-main {
+    width: 95%;
+    margin: 0 0 0 auto;
+}
+
+nav {
+    @include flex(space-between, center, row);
+    min-height: 10vh;
+    width: 95%;
+    .burger {
+        @include flex(space-between, center, row);
+        padding-left: 1.2rem;
+        background-color: $color-primary;
+        height: 5.5rem;
+        width: 5.5rem;
+        border-radius: 100%;
+  
+        img {
+            height: 3.0rem;
+            width: 3.0rem;
+            background-color: $color-white;
+            text-align: center;
+        }
+    }
+}
+
+.hero {
+    height: 100vh;
+    width: 95%;
+    h1{
+        font-size: $header1;
+        color: $color-primary;
+    }
+    p {
+        font-size: $text;
+        color: $color-primary;
+    }
+}
