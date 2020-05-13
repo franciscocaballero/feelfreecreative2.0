@@ -1,0 +1,35 @@
+
+@font-face {
+    font-family: "Neue-regular";
+    src: url("/fonts/Neue-regular.ttf");
+  }
+  @font-face {
+    font-family: "Neue-medium";
+    src: url("/fonts/Neue-medium.ttf");
+  }
+  @font-face {
+    font-family: "Neue-bold";
+    
+    src: url("/fonts/Neue-bold.ttf");
+  }
+
+
+//Global Styles 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html { 
+    font-size: 62.5%;
+}
+
+body {
+font-family: "Neue-bold",sans-serif;
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-direction: $direction;
+}
