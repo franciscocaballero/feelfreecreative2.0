@@ -1,39 +1,64 @@
 //Navigation
 .header-main {
-    width: 95%;
-    margin: 0 0 0 auto;
+  width: 95%;
+  margin: 0 0 0 auto;
 }
 
 nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  width: 95%;
+  .burger {
     @include flex(space-between, center, row);
-    min-height: 10vh;
-    width: 95%;
-    .burger {
-        @include flex(space-between, center, row);
-        padding-left: 1.2rem;
-        background-color: $color-primary;
-        height: 5.5rem;
-        width: 5.5rem;
-        border-radius: 100%;
-  
-        img {
-            height: 3.0rem;
-            width: 3.0rem;
-            background-color: $color-white;
-            text-align: center;
-        }
+    padding-left: 1.2rem;
+    background-color: $color-primary;
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 100%;
+
+    img {
+      height: 3rem;
+      width: 3rem;
+      background-color: $color-white;
+      text-align: center;
     }
+  }
 }
 
 .hero {
-    height: 100vh;
-    width: 95%;
-    h1{
-        font-size: $header1;
-        color: $color-primary;
+  min-height: 90vh;
+  width: 100%;
+  margin: auto;
+  padding-left: 10rem;
+  flex-wrap: wrap;
+
+  @include flex(space-between, center, row);
+  h1 {
+    font-size: $header1;
+    color: $color-primary;
+    font-size: 8rem;
+    padding-bottom: 2rem;
+  }
+  p {
+    font-size: 2.6rem;
+    color: $color-primary;
+    padding-bottom: 8rem;
+  }
+  .hero-image {
+    @include flex(center, center, row);      
+    height: 90vh;
+    background-color: $color-grey;
+
+    img {
+      width: 50rem;
+      height: 50rem;
+      border-radius: 100%;
+      border: 1.5rem solid $color-pink;
     }
-    p {
-        font-size: $text;
-        color: $color-primary;
-    }
+  }
+}
+
+.hero-image,
+.hero-text {
+  flex: 1 1 40rem;
 }
