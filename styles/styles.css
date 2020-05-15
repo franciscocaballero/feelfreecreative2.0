@@ -29,9 +29,9 @@ body {
 }
 
 .btn {
-  padding: 1.5rem 6rem;
+  padding: 1.5rem 8rem;
   border-radius: 4rem;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   text-decoration: none;
   cursor: pointer;
 }
@@ -66,24 +66,10 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: 10vh;
   width: 95%;
 }
 
 nav .burger {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   padding-left: 1.2rem;
   background-color: #15115B;
   height: 5.5rem;
@@ -91,7 +77,7 @@ nav .burger {
   border-radius: 100%;
 }
 
-nav .burger img {
+nav .burger .burger-icon {
   height: 3rem;
   width: 3rem;
   background-color: #fff;
@@ -99,10 +85,9 @@ nav .burger img {
 }
 
 .hero {
-  min-height: 90vh;
-  width: 100%;
+  min-height: 100vh;
+  width: 90%;
   margin: auto;
-  padding-left: 10rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   display: -webkit-box;
@@ -147,15 +132,42 @@ nav .burger img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 90vh;
+  height: 100vh;
+  width: 100%;
   background-color: #E8E7E9;
+  /* define a width to the header container */
+  position: relative !important;
+  /* see note */
 }
 
-.hero .hero-image img {
+.hero .hero-image .header-img {
   width: 50rem;
   height: 50rem;
   border-radius: 100%;
   border: 1.5rem solid #E93061;
+  z-index: 100000;
+}
+
+.hero .hero-image .circle-1 {
+  background-color: #15115B;
+  height: 10.5rem;
+  width: 10.5rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 29%;
+  right: 60%;
+  z-index: 0;
+}
+
+.hero .hero-image .circle-2 {
+  background-color: #F4B939;
+  height: 20.5rem;
+  width: 20.5rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 60%;
+  right: 20%;
+  z-index: 0;
 }
 
 .hero-image,
