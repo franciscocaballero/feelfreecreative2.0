@@ -2,42 +2,41 @@
 nav {
   width: 95%;
   margin: 0 0 0 auto;
-  h2{
-      padding-top: 4rem;
+  h2 {
+    padding-top: 4rem;
     font-size: 2.5rem;
     color: $color-primary;
   }
 }
 
 .burger {
-  //   @include flex(space-between, center, row);
-//   padding-left: 1.2rem;
   background-color: $color-primary;
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 100%;
   position: fixed;
   top: 2%;
-left: 88%;
-z-index: 100000;
+  left: 88%;
+  z-index: 100000;
 
   .burger-icon {
-    height: 3rem;
-    width: 3rem;
-    background-color: $color-white;
+    padding: 1rem 0 0 1.5rem;
+    height: 4rem;
+    width: 4rem;
     text-align: center;
+    filter: invert(100%) sepia(97%) saturate(14%) hue-rotate(198deg) brightness(103%) contrast(103%);
   }
 }
 .hero {
   @include flex(space-between, center, row);
-  min-height: 100vh;
+  min-height: 95vh;
   width: 100%;
   margin: auto;
   flex-wrap: wrap;
 
   .hero-text {
     @include flex(space-between, right, column);
-    height: 100vh;
+    height: 95vh;
 
     .header-main {
       width: 95%;
@@ -57,7 +56,7 @@ z-index: 100000;
   }
   .hero-image {
     @include flex(center, center, row);
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     background-color: $color-grey;
     /* define a width to the header container */
@@ -97,4 +96,150 @@ z-index: 100000;
 .hero-image,
 .hero-text {
   flex: 1 1 40rem;
+}
+
+//LATEST WORK
+
+.work {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.recent-work {
+  @include flex(space-around, center, column);
+  background-color: $color-primary;
+  height: 25vh;
+  padding: 4rem 0 4rem 0;
+  h2 {
+    font-size: 6.5rem;
+    color: $color-white;
+    
+  }
+}
+.Nike-Run {
+  @include flex(space-around, center, column);
+  height: 75vh;
+  background-color: $color-yellow;
+  position: relative;
+  img {
+    width: 50rem;
+    height: 50rem;
+    z-index: 1000;
+  }
+  .bg-box {
+    background-color: $color-purple;
+    width: 50rem;
+    height: 50rem;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+  }
+  h3 {
+    font-size: $header2;
+    color: $color-white;
+  }
+}
+
+.Oc-group {
+  @include flex(space-around, center, column);
+  // width: 100%;
+  height: 100vh;
+  background-color: $color-purple;
+  position: relative;
+  img {
+    width: 50rem;
+    height: 80rem;
+    z-index: 1000;
+  }
+  .bg-box {
+    background-color: $color-primary;
+    width: 50rem;
+    height: 80rem;
+    position: absolute;
+    left: 25%;
+    top: 19%;
+  }
+  h3 {
+    font-size: $header2;
+    color: $color-white;
+  }
+}
+
+
+.last-work {
+  @include flex(space-around, center, column);
+  // width: 100%;
+  height: 40rem;
+  padding: 4rem 0 4rem 0;
+  h2 {
+    font-size: 6.5rem;
+    color: $color-primary;
+  }
+  h4 {
+    font-size: $header1;
+    font-weight: 400;
+    color: $color-primary;
+    padding-bottom: 4rem;
+  }
+}
+
+.about {
+  @include flex(space-around, center, row);
+  flex-wrap: wrap;
+  .about-us {
+    background-color: $color-purple;
+    color: $color-yellow;
+  }
+  .newsletter {
+    background-color: $color-pink;
+    color: $color-white;
+  
+  }
+  .about-us,.newsletter {
+    @include flex(space-around, center, column);
+    width: 100%;
+    height: 30rem;
+    padding: 4rem 0 4rem 0;
+    flex: 1 1 40rem;
+
+    flex-wrap: wrap;
+    h2 {
+      font-size: 6.5rem;
+    }
+  }
+}
+
+footer {
+  @include flex(space-around, center, column);
+  height: 55vh;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  background-color: $color-primary;
+  color: $color-white;
+  h2 {
+    font-size: 7.5rem;
+  }
+  p {
+    font-size: 3.5rem;
+     font-weight: 700;
+  }
+  ul {
+    @include flex(space-between, center, row);
+    list-style: none;
+    width: 35rem;
+    img {
+      filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg)
+      brightness(114%) contrast(84%);
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+  h4 {
+    font-size: $text;
+   
+  }
 }

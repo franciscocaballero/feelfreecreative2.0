@@ -1,54 +1,55 @@
-//Colors 
+//Colors
 
-$color-primary: #15115B;
-$color-purple: #5620F3;
-$color-pink: #E93061;
-$color-yellow: #F4B939;
-$color-grey: #E8E7E9;
+$color-primary: #15115b;
+$color-purple: #5620f3;
+$color-blue: #1690E6;
+$color-pink: #e93061;
+$color-yellow: #f4b939;
+$color-grey: #e8e7e9;
 $color-white: #fff;
 $color-black: #000;
 
 //fonts
 
-$text: 1.5rem;
+$text: 2.5rem;
 $header1: 2.5rem;
 $header2: 4rem;
 $header3: 2.5rem;
 $header4: 2rem;
 
 @font-face {
-    font-family: "Neue-regular";
-    src: url("/fonts/Neue-regular.ttf");
-  }
-  @font-face {
-    font-family: "Neue-medium";
-    src: url("/fonts/Neue-medium.ttf");
-  }
-  @font-face {
-    font-family: "Neue-bold";
+  font-family: "Neue-regular";
+  src: url("/fonts/Neue-regular.ttf");
+}
+@font-face {
+  font-family: "Neue-medium";
+  src: url("/fonts/Neue-medium.ttf");
+}
+@font-face {
+  font-family: "Neue-bold";
 
-    src: url("/fonts/Neue-bold.ttf");
-  }
+  src: url("/fonts/Neue-bold.ttf");
+}
 
-  @mixin flex($justify, $align, $direction) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
-  }
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
 
-//Global Styles 
+//Global Styles
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html { 
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
 body {
-font-family: "Neue-bold",sans-serif;
+  font-family: "Neue-bold", sans-serif;
 }
 
 //buttons
@@ -57,6 +58,7 @@ font-family: "Neue-bold",sans-serif;
   padding: 1.5rem 8rem;
   border-radius: 4rem;
   font-size: 2.6rem;
+  font-weight: 900;
   text-decoration: none;
   cursor: pointer;
 
@@ -65,7 +67,46 @@ font-family: "Neue-bold",sans-serif;
     background-color: $color-pink;
     &:hover {
       background-color: $color-primary;
-      transition: ease-in-out .2s;
+      transition: ease-in-out 0.2s;
+    }
+  }
+  &--pink-clear {
+    color: $color-pink;
+    border: 5px solid $color-pink;
+    background-color: none;
+    &:hover {
+      background-color: $color-pink;
+      color: $color-white;
+      transition: ease-in-out 0.2s;
+    }
+  }
+
+  &--blue {
+    color: $color-blue ;
+    border: 4px solid $color-blue;
+    background-color: none;
+    &:hover {
+      color: $color-white;
+      background-color: $color-blue;
+      transition: ease-in-out 0.1s;
+    }
+  }
+  &--yellow {
+    color: $color-white;
+    background-color: $color-yellow;
+    &:hover {
+      background-color: $color-primary;
+      transition: ease-in-out 0.2s;
+    }
+  }
+
+  &--white {
+    background-color: white;
+    color: $color-pink;
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+      transition: ease-in-out 0.2s;
     }
   }
 }

@@ -25,26 +25,76 @@ html {
 }
 
 body {
-  font-family: "Neue-bold",sans-serif;
+  font-family: "Neue-bold", sans-serif;
 }
 
 .btn {
   padding: 1.5rem 8rem;
   border-radius: 4rem;
   font-size: 2.6rem;
+  font-weight: 900;
   text-decoration: none;
   cursor: pointer;
 }
 
 .btn--pink {
   color: #fff;
-  background-color: #E93061;
+  background-color: #e93061;
 }
 
 .btn--pink:hover {
-  background-color: #15115B;
-  -webkit-transition: ease-in-out .2s;
-  transition: ease-in-out .2s;
+  background-color: #15115b;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.btn--pink-clear {
+  color: #e93061;
+  border: 5px solid #e93061;
+  background-color: none;
+}
+
+.btn--pink-clear:hover {
+  background-color: #e93061;
+  color: #fff;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.btn--blue {
+  color: #1690E6;
+  border: 4px solid #1690E6;
+  background-color: none;
+}
+
+.btn--blue:hover {
+  color: #fff;
+  background-color: #1690E6;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.btn--yellow {
+  color: #fff;
+  background-color: #f4b939;
+}
+
+.btn--yellow:hover {
+  background-color: #15115b;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.btn--white {
+  background-color: white;
+  color: #e93061;
+}
+
+.btn--white:hover {
+  color: #fff;
+  background-color: #15115b;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 
 nav {
@@ -55,11 +105,11 @@ nav {
 nav h2 {
   padding-top: 4rem;
   font-size: 2.5rem;
-  color: #15115B;
+  color: #15115b;
 }
 
 .burger {
-  background-color: #15115B;
+  background-color: #15115b;
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 100%;
@@ -70,10 +120,12 @@ nav h2 {
 }
 
 .burger .burger-icon {
-  height: 3rem;
-  width: 3rem;
-  background-color: #fff;
+  padding: 1rem 0 0 1.5rem;
+  height: 4rem;
+  width: 4rem;
   text-align: center;
+  -webkit-filter: invert(100%) sepia(97%) saturate(14%) hue-rotate(198deg) brightness(103%) contrast(103%);
+          filter: invert(100%) sepia(97%) saturate(14%) hue-rotate(198deg) brightness(103%) contrast(103%);
 }
 
 .hero {
@@ -90,7 +142,7 @@ nav h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: 100vh;
+  min-height: 95vh;
   width: 100%;
   margin: auto;
   -ms-flex-wrap: wrap;
@@ -111,7 +163,7 @@ nav h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 95vh;
 }
 
 .hero .hero-text .header-main {
@@ -121,14 +173,14 @@ nav h2 {
 
 .hero .hero-text h1 {
   font-size: 2.5rem;
-  color: #15115B;
+  color: #15115b;
   font-size: 8rem;
   padding-bottom: 2rem;
 }
 
 .hero .hero-text p {
   font-size: 2.6rem;
-  color: #15115B;
+  color: #15115b;
   padding-bottom: 8rem;
 }
 
@@ -146,9 +198,9 @@ nav h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
-  background-color: #E8E7E9;
+  background-color: #e8e7e9;
   /* define a width to the header container */
   position: relative !important;
   /* see note */
@@ -159,12 +211,12 @@ nav h2 {
   width: 50rem;
   height: 50rem;
   border-radius: 100%;
-  border: 1.5rem solid #E93061;
+  border: 1.5rem solid #e93061;
   z-index: 100000;
 }
 
 .hero .hero-image .circle-1 {
-  background-color: #15115B;
+  background-color: #15115b;
   height: 10.5rem;
   width: 10.5rem;
   border-radius: 100%;
@@ -175,7 +227,7 @@ nav h2 {
 }
 
 .hero .hero-image .circle-2 {
-  background-color: #F4B939;
+  background-color: #f4b939;
   height: 20.5rem;
   width: 20.5rem;
   border-radius: 100%;
@@ -190,5 +242,256 @@ nav h2 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
+}
+
+.work {
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.recent-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #15115b;
+  height: 25vh;
+  padding: 4rem 0 4rem 0;
+}
+
+.recent-work h2 {
+  font-size: 6.5rem;
+  color: #fff;
+}
+
+.Nike-Run {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 75vh;
+  background-color: #f4b939;
+  position: relative;
+}
+
+.Nike-Run img {
+  width: 50rem;
+  height: 50rem;
+  z-index: 1000;
+}
+
+.Nike-Run .bg-box {
+  background-color: #5620f3;
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+
+.Nike-Run h3 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.Oc-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: #5620f3;
+  position: relative;
+}
+
+.Oc-group img {
+  width: 50rem;
+  height: 80rem;
+  z-index: 1000;
+}
+
+.Oc-group .bg-box {
+  background-color: #15115b;
+  width: 50rem;
+  height: 80rem;
+  position: absolute;
+  left: 25%;
+  top: 19%;
+}
+
+.Oc-group h3 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.last-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 40rem;
+  padding: 4rem 0 4rem 0;
+}
+
+.last-work h2 {
+  font-size: 6.5rem;
+  color: #15115b;
+}
+
+.last-work h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #15115b;
+  padding-bottom: 4rem;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about .about-us {
+  background-color: #5620f3;
+  color: #f4b939;
+}
+
+.about .newsletter {
+  background-color: #e93061;
+  color: #fff;
+}
+
+.about .about-us, .about .newsletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 30rem;
+  padding: 4rem 0 4rem 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about .about-us h2, .about .newsletter h2 {
+  font-size: 6.5rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 55vh;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  background-color: #15115b;
+  color: #fff;
+}
+
+footer h2 {
+  font-size: 7.5rem;
+}
+
+footer p {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  width: 35rem;
+}
+
+footer ul img {
+  -webkit-filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg) brightness(114%) contrast(84%);
+          filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg) brightness(114%) contrast(84%);
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+footer h4 {
+  font-size: 2.5rem;
 }
 /*# sourceMappingURL=styles.css.map */
