@@ -1,0 +1,140 @@
+.mission {
+  @include flex(space-around, right, column);
+  background-color: $color-yellow;
+  color: $color-primary;
+  height: 60rem;
+
+  .text-box {
+    width: 95%;
+    margin: 0 0 0 auto;
+    h2 {
+      font-size: $header3;
+      color: $color-primary;
+      text-decoration: underline;
+      margin-bottom: 6rem;
+    }
+    p {
+      font-size: $text;
+      color: $color-primary;
+      line-height: 4.5rem;
+    }
+  }
+}
+
+.banner {
+  height: 35rem;
+  width: 100%;
+  margin: 0 0 0 auto;
+  text-align: center;
+  padding: 4rem 0 4rem 0;
+  h1 {
+    font-size: $header1;
+    color: $color-primary;
+    text-decoration: underline;
+  }
+
+}
+
+
+.banner-pink {
+    width: 100%;
+    background-color: $color-pink;
+    color: $color-white;
+    height: 25rem;
+    @include flex(space-around, center, column);
+    .box{
+        width: 95%;
+        h1 {
+            text-align: center;
+            font-size: $header1;
+            color: $color-white;
+        }
+    }
+}
+
+
+.process {
+  height: 80rem;
+  background-color: $color-purple;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  .our-process {
+    // @include flex(space-around, center, column);
+    display: flex;
+    flex-direction: column;
+    // margin: 0 0 0 auto;
+    // width: 95%;
+
+    h2 {
+      color: $color-white;
+      font-size: $header2;
+    }
+    p {
+      font-size: $text;
+    }
+  }
+}
+
+
+.services {
+    width: 100%;
+    height: 60rem;
+    @include flex(space-around, center, column);
+    h2 {
+        font-size: $header1;
+        color: $color-primary;
+        text-decoration: underline;
+        margin-bottom: 2rem;
+    }
+    ul {
+        list-style: none;
+        text-align: center;
+        color: $color-primary;
+        font-size: $text;
+        font-weight: 600;
+        li {
+            padding: 2rem 0 2rem 0;
+        }
+
+    }
+}
+
+
+
+.team {
+  width: 100%;
+  height: 50rem;
+  @include flex(space-around, center, column);
+  h1 {
+    font-size: $header1;
+    color: $color-primary;
+    text-decoration: underline;
+  }
+  .members {
+    @include flex(space-around, center, column);
+    width: 90%;
+
+    .member1 {
+      @include flex(space-between, center, row);
+      width: 100%;
+      margin-bottom: 8rem;
+      h3,
+      p,
+      ul {
+        font-size: $text;
+        color: $color-primary;
+      }
+      h3 {
+        font-weight: 300;
+      }
+      p {
+        font-weight: 700;
+      }
+      ul {
+          list-style: none;
+
+      }
+    }
+  }
+}
