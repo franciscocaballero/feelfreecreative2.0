@@ -495,6 +495,102 @@ footer h4 {
   font-size: 2.5rem;
 }
 
+.projects {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 50%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.projects .project .info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #5620f3;
+  text-decoration: none;
+}
+
+.projects .project .info-box h2 {
+  color: #fff;
+  font-size: 6.5rem;
+  padding: 0rem;
+}
+
+.projects .project .info-box img {
+  text-decoration: none;
+  -webkit-filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg) brightness(114%) contrast(84%);
+          filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg) brightness(114%) contrast(84%);
+  width: 12rem;
+  height: 12rem;
+}
+
+.projects .project--1 {
+  background-image: url("../img/gallery-10.png");
+}
+
+.projects .project--2 {
+  background-image: url("../img/gallery-2.png");
+}
+
+.projects .project--3 {
+  background-image: url("../img/gallery-5.jpg");
+}
+
+.projects .project--4 {
+  background-image: url("../img/gallery-1.png");
+}
+
+.projects .project:hover .info-box {
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+  opacity: 1;
+}
+
 .mission {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -510,7 +606,7 @@ footer h4 {
           flex-direction: column;
   background-color: #f4b939;
   color: #15115b;
-  height: 60rem;
+  height: 65rem;
 }
 
 .mission .text-box {
@@ -536,7 +632,18 @@ footer h4 {
   width: 100%;
   margin: 0 0 0 auto;
   text-align: center;
-  padding: 4rem 0 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .banner h1 {
@@ -575,26 +682,47 @@ footer h4 {
 }
 
 .process {
-  height: 80rem;
+  height: 90rem;
+  width: 100%;
   background-color: #5620f3;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .process .our-process {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.process .our-process .step {
+  width: 40%;
 }
 
 .process .our-process h2 {
@@ -604,11 +732,14 @@ footer h4 {
 
 .process .our-process p {
   font-size: 2.5rem;
+  max-width: 40rem;
+  line-height: 4.5rem;
 }
 
 .services {
   width: 100%;
   height: 60rem;
+  padding: 4rem 0 4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,7 +826,7 @@ footer h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  width: 50vw;
   margin-bottom: 8rem;
 }
 
@@ -716,5 +847,82 @@ footer h4 {
 
 .team .members .member1 ul {
   list-style: none;
+}
+
+.contact-info {
+  height: 90vh;
+  width: 100%;
+  background-color: #5620f3;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.contact-info h2 {
+  font-size: 6.5rem;
+  font-weight: 500;
+}
+
+.contact-info p {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 5rem;
+}
+
+.contact-info a {
+  color: #e93061;
+  font-weight: 900;
+}
+
+.contact-info .contact-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  width: 90%;
+}
+
+.contact-info .contact-box .header-text {
+  height: 100%;
+}
+
+.contact-info .contact-box .header-text h2 {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.contact-info .info {
+  width: 50rem;
+}
+
+.header-main {
+  width: 50rem;
 }
 /*# sourceMappingURL=styles.css.map */

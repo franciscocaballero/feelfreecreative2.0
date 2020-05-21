@@ -1,0 +1,43 @@
+.contact-info {
+  height: 90vh;
+  width: 100%;
+  background-color: $color-purple;
+  color: $color-white;
+  @include flex(space-around, center, column);
+  flex-wrap: wrap;
+  flex-basis: 50%;
+
+  h2 {
+    font-size: $header1;
+    font-weight: 500;
+  }
+  p {
+    font-size: $text;
+    font-weight: 300;
+    line-height: 5rem;
+  }
+  a {
+    color: $color-pink;
+    font-weight: 900;
+  }
+  .contact-box {
+    @include flex(space-around, center, row);
+    flex-wrap: wrap;
+  flex-basis: 50%;
+    width: 90%;
+
+    .header-text {
+      height: 100%;
+      h2 {
+        align-self: start;
+      }
+    }
+  }
+  .info {
+    width: 50rem;
+  }
+}
+
+.header-main {
+  width: 50rem;
+}

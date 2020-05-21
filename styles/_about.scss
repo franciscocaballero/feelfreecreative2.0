@@ -2,7 +2,7 @@
   @include flex(space-around, right, column);
   background-color: $color-yellow;
   color: $color-primary;
-  height: 60rem;
+  height: 65rem;
 
   .text-box {
     width: 95%;
@@ -26,7 +26,8 @@
   width: 100%;
   margin: 0 0 0 auto;
   text-align: center;
-  padding: 4rem 0 4rem 0;
+  @include flex(space-around, center, column);
+
   h1 {
     font-size: $header1;
     color: $color-primary;
@@ -41,6 +42,7 @@
     background-color: $color-pink;
     color: $color-white;
     height: 25rem;
+    // margin: 4rem 12rem 4rem 12rem;
     @include flex(space-around, center, column);
     .box{
         width: 95%;
@@ -54,33 +56,40 @@
 
 
 .process {
-  height: 80rem;
+  height: 90rem;
+  width: 100%;
   background-color: $color-purple;
   color: $color-white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  @include flex(space-around, center, row);
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  
+  
   .our-process {
-    // @include flex(space-around, center, column);
-    display: flex;
-    flex-direction: column;
-    // margin: 0 0 0 auto;
-    // width: 95%;
-
+    @include flex(space-around, center, row);
+    .step{
+        width: 40%;
+    }
     h2 {
       color: $color-white;
       font-size: $header2;
     }
     p {
       font-size: $text;
+      max-width: 40rem;
+      line-height: 4.5rem;
     }
   }
 }
 
-
 .services {
     width: 100%;
     height: 60rem;
+    padding: 4rem 0 4rem 0;
     @include flex(space-around, center, column);
+
     h2 {
         font-size: $header1;
         color: $color-primary;
@@ -117,7 +126,7 @@
 
     .member1 {
       @include flex(space-between, center, row);
-      width: 100%;
+      width: 50vw;
       margin-bottom: 8rem;
       h3,
       p,
