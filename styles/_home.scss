@@ -29,7 +29,7 @@ nav {
 }
 .hero {
   @include flex(space-between, center, row);
-  min-height: 95vh;
+  height: 95vh;
   width: 100%;
   margin: auto;
   flex-wrap: wrap;
