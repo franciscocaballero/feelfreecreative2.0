@@ -97,53 +97,90 @@ body {
   transition: ease-in-out 0.2s;
 }
 
-.nav-page {
-  height: 100vh;
-  min-width: 100vw;
-  background-color: #5620f3;
+nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #15115b;
+  top: 0;
+  left: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  z-index: 100000000;
+  padding: 0rem 4rem 0rem 0rem;
 }
 
-.nav-page .nav-main {
-  height: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.nav-page .nav-main nav {
+nav .nav-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 60%;
+  text-align: right;
+  font-weight: 500;
+  color: #fff;
+  font-size: 4.5rem;
+  list-style: none;
 }
 
-nav {
+nav .nav-box a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .nav-box a:hover {
+  color: #5620f3;
+}
+
+nav .nav-box li {
+  list-style: none;
+  padding: 1rem 0 1rem 0;
+}
+
+nav .nav-box .x {
+  -webkit-filter: invert(97%) sepia(13%) saturate(105%) hue-rotate(249deg) brightness(116%) contrast(100%);
+          filter: invert(97%) sepia(13%) saturate(105%) hue-rotate(249deg) brightness(116%) contrast(100%);
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: auto;
+}
+
+.nav-open {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.li-sub {
+  font-size: 2.5rem;
+}
+
+.logo-box {
   width: 95%;
   margin: 0 0 0 auto;
 }
 
-nav h2 {
+.logo-box a {
+  text-decoration: none;
+}
+
+.logo-box h2 {
   padding-top: 4rem;
   font-size: 2.5rem;
   color: #15115b;
@@ -239,13 +276,12 @@ nav h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 95vh;
+  min-height: 95vh;
   width: 100%;
   background-color: #e8e7e9;
   /* define a width to the header container */
-  position: relative !important;
+  position: relative;
   /* see note */
-  z-index: 10000;
 }
 
 .hero .hero-image .header-img {
@@ -253,7 +289,7 @@ nav h2 {
   height: 50rem;
   border-radius: 100%;
   border: 1.5rem solid #e93061;
-  z-index: 100000;
+  z-index: 100;
 }
 
 .hero .hero-image .circle-1 {
@@ -286,14 +322,8 @@ nav h2 {
 }
 
 .work {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
 }
 
 .recent-work {
@@ -334,22 +364,26 @@ nav h2 {
           flex-direction: column;
   height: 75vh;
   background-color: #f4b939;
+}
+
+.Nike-Run .display-box {
   position: relative;
 }
 
-.Nike-Run img {
-  width: 50rem;
-  height: 50rem;
-  z-index: 1000;
+.Nike-Run .display-box img {
+  position: relative;
+  z-index: 100;
+  width: 45rem;
+  height: 45rem;
 }
 
-.Nike-Run .bg-box {
+.Nike-Run .display-box .bg-box {
   background-color: #5620f3;
-  width: 50rem;
-  height: 50rem;
+  width: 45rem;
+  height: 45rem;
   position: absolute;
-  left: 25%;
-  top: 25%;
+  left: 5%;
+  top: 5%;
 }
 
 .Nike-Run h3 {
@@ -370,7 +404,7 @@ nav h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background-color: #5620f3;
   position: relative;
 }
@@ -378,7 +412,7 @@ nav h2 {
 .Oc-group img {
   width: 50rem;
   height: 80rem;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .Oc-group .bg-box {
@@ -395,7 +429,10 @@ nav h2 {
   color: #fff;
 }
 
-.last-work {
+.discuss-project {
+  padding: 4rem 0 4rem 0;
+  width: 100%;
+  height: 55rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,18 +445,19 @@ nav h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 40rem;
-  padding: 4rem 0 4rem 0;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.last-work h2 {
+.discuss-project h2 {
   font-size: 6.5rem;
   color: #15115b;
 }
 
-.last-work h4 {
-  font-size: 6.5rem;
-  font-weight: 400;
+.discuss-project h4 {
+  font-size: 3.5rem;
+  font-weight: 300;
   color: #15115b;
   padding-bottom: 4rem;
 }
@@ -500,6 +538,7 @@ footer {
 
 footer h2 {
   font-size: 7.5rem;
+  text-align: center;
 }
 
 footer p {
