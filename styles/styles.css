@@ -97,6 +97,18 @@ body {
   transition: ease-in-out 0.2s;
 }
 
+@media screen and (max-width: 880px) {
+  html {
+    font-size: 40.5%;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  html {
+    font-size: 30.5%;
+  }
+}
+
 nav {
   width: 100%;
   height: 100%;
@@ -210,17 +222,8 @@ nav .nav-box .x {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 95vh;
+  direction: row;
+  height: 100vh;
   width: 100%;
   margin: auto;
   -ms-flex-wrap: wrap;
@@ -231,17 +234,14 @@ nav .nav-box .x {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 95vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
 }
 
 .hero .hero-text .header-main {
@@ -252,12 +252,11 @@ nav .nav-box .x {
 .hero .hero-text h1 {
   font-size: 6.5rem;
   color: #15115b;
-  font-size: 8rem;
   padding-bottom: 2rem;
 }
 
 .hero .hero-text p {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
   color: #15115b;
   padding-bottom: 8rem;
 }
@@ -266,22 +265,21 @@ nav .nav-box .x {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  min-height: 95vh;
-  width: 100%;
+  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #e8e7e9;
-  /* define a width to the header container */
+}
+
+.hero .hero-image .image-container {
   position: relative;
-  /* see note */
 }
 
 .hero .hero-image .header-img {
@@ -290,27 +288,28 @@ nav .nav-box .x {
   border-radius: 100%;
   border: 1.5rem solid #e93061;
   z-index: 100;
+  position: relative;
 }
 
 .hero .hero-image .circle-1 {
   background-color: #15115b;
-  height: 10.5rem;
-  width: 10.5rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 100%;
   position: absolute;
-  top: 29%;
-  right: 60%;
+  top: 0;
+  right: 75%;
   z-index: 0;
 }
 
 .hero .hero-image .circle-2 {
   background-color: #f4b939;
-  height: 20.5rem;
-  width: 20.5rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 100%;
   position: absolute;
-  top: 60%;
-  right: 20%;
+  top: 80%;
+  right: 0;
   z-index: 0;
 }
 
@@ -322,8 +321,11 @@ nav .nav-box .x {
 }
 
 .work {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
 }
 
 .recent-work {
@@ -373,14 +375,14 @@ nav .nav-box .x {
 .Nike-Run .display-box img {
   position: relative;
   z-index: 100;
-  width: 45rem;
-  height: 45rem;
+  width: 50rem;
+  height: 50rem;
 }
 
 .Nike-Run .display-box .bg-box {
   background-color: #5620f3;
-  width: 45rem;
-  height: 45rem;
+  width: 50rem;
+  height: 50rem;
   position: absolute;
   left: 5%;
   top: 5%;
@@ -389,6 +391,18 @@ nav .nav-box .x {
 .Nike-Run h3 {
   font-size: 5.5rem;
   color: #fff;
+}
+
+.Nike-Run h3:hover {
+  color: #5620f3;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.Nike-Run a {
+  text-decoration: none;
 }
 
 .Oc-group {
@@ -404,24 +418,28 @@ nav .nav-box .x {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  height: 100vh;
   background-color: #5620f3;
+}
+
+.Oc-group .display-box {
   position: relative;
 }
 
-.Oc-group img {
+.Oc-group .display-box img {
+  position: relative;
+  z-index: 100;
   width: 50rem;
   height: 80rem;
-  z-index: 100;
 }
 
-.Oc-group .bg-box {
+.Oc-group .display-box .bg-box {
   background-color: #15115b;
   width: 50rem;
   height: 80rem;
   position: absolute;
-  left: 25%;
-  top: 19%;
+  left: 5%;
+  top: 5%;
 }
 
 .Oc-group h3 {
@@ -429,10 +447,22 @@ nav .nav-box .x {
   color: #fff;
 }
 
+.Oc-group h3:hover {
+  color: #15115b;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.Oc-group a {
+  text-decoration: none;
+}
+
 .discuss-project {
   padding: 4rem 0 4rem 0;
   width: 100%;
-  height: 55rem;
+  height: 35vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,20 +476,18 @@ nav .nav-box .x {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .discuss-project h2 {
   font-size: 6.5rem;
   color: #15115b;
+  padding-bottom: 1.5rem;
 }
 
 .discuss-project h4 {
   font-size: 3.5rem;
   font-weight: 300;
   color: #15115b;
-  padding-bottom: 4rem;
 }
 
 .about {
@@ -489,7 +517,8 @@ nav .nav-box .x {
   color: #fff;
 }
 
-.about .about-us, .about .newsletter {
+.about .about-us,
+.about .newsletter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,7 +541,8 @@ nav .nav-box .x {
       flex-wrap: wrap;
 }
 
-.about .about-us h2, .about .newsletter h2 {
+.about .about-us h2,
+.about .newsletter h2 {
   font-size: 6.5rem;
 }
 
@@ -537,7 +567,7 @@ footer {
 }
 
 footer h2 {
-  font-size: 7.5rem;
+  font-size: 6.5rem;
   text-align: center;
 }
 
@@ -575,38 +605,103 @@ footer h4 {
   font-size: 2.5rem;
 }
 
+footer a {
+  font-size: 3.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 880px) {
+  .hero-text {
+    max-height: 65vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hero-image {
+    max-height: 35vh;
+  }
+  .hero-image .image-container .header-img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 100%;
+    border: 1.5rem solid #e93061;
+    z-index: 100;
+  }
+  .hero-image .image-container .circle-1 {
+    background-color: #15115b;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 75%;
+    z-index: 0;
+  }
+  .hero-image .image-container .circle-2 {
+    background-color: #f4b939;
+    height: 10rem;
+    width: 10rem;
+  }
+  .header-main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 10rem;
+  }
+  .work-box {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .recent-work {
+    height: 20vh;
+  }
+  .Nike-Run {
+    height: 30vh;
+  }
+  .Nike-Run .display-box img,
+  .Nike-Run .display-box .bg-box {
+    height: 25rem;
+    width: 25rem;
+  }
+  .Oc-group {
+    height: 50vh;
+  }
+  .Oc-group .display-box img,
+  .Oc-group .display-box .bg-box {
+    height: 40rem;
+    width: 25rem;
+  }
+  .work {
+    -ms-grid-columns: (minmax(40rem, 2fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 2fr));
+  }
+}
+
 .projects {
   height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .projects .project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   height: 50%;
   width: 50%;
   background-repeat: no-repeat;
@@ -633,6 +728,7 @@ footer h4 {
   opacity: 0;
   background-color: #5620f3;
   text-decoration: none;
+  text-align: center;
 }
 
 .projects .project .info-box h2 {
@@ -654,7 +750,7 @@ footer h4 {
 }
 
 .projects .project--2 {
-  background-image: url("../img/gallery-2.png");
+  background-image: url("../img/gallerybg-15.jpg");
 }
 
 .projects .project--3 {
@@ -662,13 +758,20 @@ footer h4 {
 }
 
 .projects .project--4 {
-  background-image: url("../img/gallery-1.png");
+  background-image: url("../img/gallery-4.jpg");
 }
 
 .projects .project:hover .info-box {
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
   opacity: 1;
+}
+
+@media screen and (max-width: 880px) {
+  .projects .project {
+    height: 25%;
+    width: 100%;
+  }
 }
 
 .mission {
@@ -686,7 +789,7 @@ footer h4 {
           flex-direction: column;
   background-color: #f4b939;
   color: #15115b;
-  height: 65rem;
+  height: 65vh;
 }
 
 .mission .text-box {
@@ -762,7 +865,7 @@ footer h4 {
 }
 
 .process {
-  height: 90rem;
+  height: 65vh;
   width: 100%;
   background-color: #5620f3;
   color: #fff;
@@ -773,44 +876,28 @@ footer h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -ms-flex-preferred-size: 40rem;
+      flex-basis: 40rem;
 }
 
-.process .our-process {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.process .step {
+  padding: 2rem;
 }
 
-.process .our-process .step {
-  width: 40%;
-}
-
-.process .our-process h2 {
+.process .step h2 {
   color: #fff;
   font-size: 5.5rem;
 }
 
-.process .our-process p {
+.process .step p {
   font-size: 2.5rem;
   max-width: 40rem;
   line-height: 4.5rem;
@@ -855,7 +942,7 @@ footer h4 {
 
 .team {
   width: 100%;
-  height: 50rem;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -906,7 +993,7 @@ footer h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 50vw;
+  width: 55vw;
   margin-bottom: 8rem;
 }
 
@@ -929,6 +1016,17 @@ footer h4 {
   list-style: none;
 }
 
+@media screen and (max-width: 880px) {
+  .process {
+    height: 110vh;
+    padding: 4rem 0 4rem 0;
+  }
+  .process .step {
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
 .phone {
   width: 100%;
   height: 10%;
@@ -944,7 +1042,7 @@ footer h4 {
 }
 
 .contact-info {
-  height: 90%;
+  height: 80vh;
   width: 100%;
   background-color: #5620f3;
   color: #fff;
@@ -1000,24 +1098,52 @@ footer h4 {
       flex-wrap: wrap;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  width: 90%;
+  width: 80%;
 }
 
-.contact-info .contact-box .header-text {
+.contact-info .contact-box .contact-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 100%;
-}
-
-.contact-info .contact-box .header-text h2 {
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  width: 50rem;
 }
 
 .contact-info .info {
   width: 50rem;
 }
 
-.header-main {
-  width: 50rem;
+.contact-info .info .info-card {
+  padding: 2rem 0 2rem 0;
+}
+
+.phone {
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  background-color: #e93061;
+}
+
+.phone a {
+  font-size: 6.5rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 842px) {
+  .contact-info {
+    height: 100vh;
+  }
+  .contact-text {
+    max-height: 25%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

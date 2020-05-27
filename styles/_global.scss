@@ -12,6 +12,7 @@ $color-black: #000;
 //fonts
 
 $text: 2.5rem;
+$text-big: 3.5rem;
 $header1: 6.5rem;
 $header2: 5.5rem;
 $header3: 4.5rem;
@@ -109,4 +110,38 @@ body {
       transition: ease-in-out 0.2s;
     }
   }
+}
+
+
+//************************************************************
+//************* Media Query ************************************
+// @media screen and (max-width: 842px) {
+//   $text-big: 1.6rem;
+//   $text: 1.5rem;
+//   $header1: 3.5rem;
+//   $header2: 4.5rem;
+//   $header3: 3.5rem;
+//   $header4: 2.5rem;
+
+// .work {
+//   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+// }
+// }
+
+
+
+
+@media screen and (max-width: 880px){
+  html {
+    font-size: 40.5%;
+  }
+
+
+}
+@media screen and (max-width: 569px){
+  html {
+    font-size: 30.5%;
+  }
+
+
 }

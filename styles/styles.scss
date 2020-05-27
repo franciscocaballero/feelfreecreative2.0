@@ -1,8 +1,17 @@
 @import 'global';
 @import 'nav';
 @import 'home';
-@import 'projects';
+@import 'work';
 @import 'about';
 @import 'contact';
 @import 'variables';
 
+@media screen and (max-width: 880px){
+    $text-big: 1.6rem;
+    $text: 1.5rem;
+    $header1: 1.5rem;
+    $header2: 4.5rem;
+    $header3: 3.5rem;
+    $header4: 2.5rem;
+  
+  }
