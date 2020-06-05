@@ -9,7 +9,6 @@
   flex-wrap: wrap;
 
   .project {
-
     height: 50%;
     width: 50%;
     background-repeat: no-repeat;
@@ -26,23 +25,23 @@
       text-decoration: none;
       text-align: center;
       h2 {
-          color: $color-white;
-          font-size: 6.5rem;
-          padding: 0rem;
+        color: $color-white;
+        font-size: 6.5rem;
+        padding: 0rem;
       }
       img {
         text-decoration: none;
         filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg)
-        brightness(114%) contrast(84%);
+          brightness(114%) contrast(84%);
         width: 12rem;
         height: 12rem;
       }
     }
     &--1 {
-      background-image: url("../img/gallery-10.png");
+      background-image: url("../img/natours.png");
     }
     &--2 {
-      background-image: url("../img/gallerybg-15.jpg");
+      background-image: url("../img/nexter.png");
     }
     &--3 {
       background-image: url("../img/gallery-5.jpg");
@@ -59,20 +58,13 @@
   }
 }
 
-
-
-
-  @media screen and (max-width: 880px){
-  
-    .projects{
-
-      .project {
-        // flex-basis: 50%;
-        // @include flex(space-around, center, row);
-        height: 25%;
-        width: 100%;
-      } 
+@media (max-width: 1200px) {
+  .projects {
+    .project {
+      // flex-basis: 50%;
+      // @include flex(space-around, center, row);
+      height: 25%;
+      width: 100%;
     }
+  }
 }
-
-

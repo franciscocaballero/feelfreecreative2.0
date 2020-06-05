@@ -4,13 +4,13 @@
   @include flex(space-around, right, column);
   background-color: $color-yellow;
   color: $color-primary;
-  height: 65vh;
+  height: 60vh;
 
   .text-box {
     width: 95%;
     margin: 0 0 0 auto;
     h2 {
-      font-size: $header3;
+      font-size: $header2;
       color: $color-primary;
       text-decoration: underline;
       margin-bottom: 6rem;
@@ -23,7 +23,7 @@
   }
 }
 //************************************************************
-//******* BANNERS *************************************
+//******* TEXT BANNERS *************************************
 .banner {
   height: 35rem;
   width: 100%;
@@ -43,7 +43,6 @@
   background-color: $color-pink;
   color: $color-white;
   height: 25rem;
-  // margin: 4rem 12rem 4rem 12rem;
   @include flex(space-around, center, column);
   .box {
     width: 95%;
@@ -68,10 +67,9 @@
   align-items: center;
   flex-wrap: wrap;
   flex-basis: 40rem;
-
   .step {
     padding: 2rem;
- 
+
     h2 {
       color: $color-white;
       font-size: $header2;
@@ -148,7 +146,12 @@
   }
 }
 
-@media screen and (max-width: 880px) {
+//************************************************************
+//************* Media Query ************************************
+
+//SMALL DESKTOP/TABLET ******************************
+
+@media (max-width: 1200px) {
   .process {
     height: 110vh;
     padding: 4rem 0 4rem 0;
