@@ -9,6 +9,7 @@
   flex-wrap: wrap;
 
   .project {
+    animation: fade-in 2s;
     height: 50%;
     width: 50%;
     background-repeat: no-repeat;
@@ -22,37 +23,49 @@
       height: 100%;
       opacity: 0;
       background-color: $color-purple;
+      
       text-decoration: none;
       text-align: center;
       h2 {
         color: $color-white;
-        font-size: 6.5rem;
+        font-size: 3.5rem;
         padding: 0rem;
+        padding-bottom: 2rem;
+      
+      }
+      .light{
+        font-weight: 300;
+        font-size: 2rem;
       }
       img {
         text-decoration: none;
         filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg)
           brightness(114%) contrast(84%);
-        width: 12rem;
-        height: 12rem;
+        width: 4rem;
+        height: 4rem;
       }
     }
     &--1 {
       background-image: url("../img/natours.png");
+   
     }
     &--2 {
       background-image: url("../img/nexter.png");
+
     }
     &--3 {
       background-image: url("../img/gallery-5.jpg");
+   
     }
     &--4 {
       background-image: url("../img/gallery-4.jpg");
+ 
     }
     &:hover {
       .info-box {
         transition: ease-in-out 0.4s;
         opacity: 1;
+        transform: translateX(0);
       }
     }
   }

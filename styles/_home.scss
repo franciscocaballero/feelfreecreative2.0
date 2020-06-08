@@ -12,6 +12,7 @@
     padding-top: 4rem;
     font-size: $text;
     color: $color-primary;
+    animation: fade-in 2s;
   }
 }
 
@@ -36,10 +37,11 @@
 }
 //*********************************************************
 //********* Hero Section *********************************
+
 .hero {
   display: flex;
   direction: row;
-  height: 90vh;
+  height: 95vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -49,29 +51,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     .header-main {
       width: 65%;
+      animation: fade-in 2s;
     }
     h1 {
       font-size: $header1;
       color: $color-primary;
-      padding-bottom: 2rem;
+      padding-bottom: 4rem;
+      font-weight: 900;
     }
     p {
       font-size: $text;
       color: $color-primary;
-      padding-bottom: 8rem;
+      padding-bottom: 7rem;
+      font-weight: 300;
+      line-height: 4rem;
     }
   }
   .hero-image {
     display: flex;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     justify-content: space-around;
     background-color: $color-grey;
     .image-container {
       position: relative;
+      animation: fade-in 2s;
     }
 
     .header-img {
@@ -149,16 +156,24 @@
     background-color: $color-primary;
     height: 30vh;
     padding: 4rem 0 4rem 0;
+    .work-container {
+      @include flex(space-around, center, column);
+      height: 19vh;
+    }
     h2 {
       font-size: 6.5rem;
       color: $color-white;
     }
   }
   .Nike-Run {
-    @include flex(space-around, center, column);
     height: 90vh;
-
+ 
+  
     background-color: $color-yellow;
+    .container{
+      height: 100%;
+    @include flex(space-around, center, column);
+    }
     .display-box {
       position: relative;
 
@@ -197,12 +212,15 @@
   }
 
   .Oc-group {
-    @include flex(space-around, center, column);
     height: 120vh;
     background-color: $color-purple;
+    .container{
+      height: 100%;
+    @include flex(space-around, center, column);
+    }
     .display-box {
       position: relative;
-      // .box1 {
+
 
       .box1 {
         width: 60rem;
@@ -246,7 +264,10 @@
   padding: 4rem 0 4rem 0;
   width: 100%;
   height: 35vh;
-  @include flex(space-around, center, column);
+  .container{
+    height: 100%;
+    @include flex(space-around, center, column);
+  }
   text-align: center;
   h2 {
     font-size: $header1;
@@ -265,10 +286,18 @@
   @include flex(space-around, center, row);
   flex-wrap: wrap;
   .about-us {
+    .container{
+      height: 100%;
+      @include flex(space-around, center, column);
+    }
     background-color: $color-purple;
     color: $color-yellow;
   }
   .newsletter {
+    .container{
+      height: 100%;
+      @include flex(space-around, center, column);
+    }
     background-color: $color-pink;
     color: $color-white;
   }
@@ -295,6 +324,10 @@ footer {
   padding: 2rem 0 0 0;
   background-color: $color-primary;
   color: $color-white;
+  .content-box {
+    @include flex(space-around, center, column);
+    height: 55vh;
+  }
   h2 {
     font-size: $header1;
     text-align: center;

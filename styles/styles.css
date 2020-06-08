@@ -97,6 +97,49 @@ body {
   transition: ease-in-out 0.2s;
 }
 
+.inline-photo {
+  opacity: 0;
+  -webkit-transform: translateY(4em);
+          transform: translateY(4em);
+  -webkit-transition: opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.is-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    -webkit-transform: translateY(4em);
+            transform: translateY(4em);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    -webkit-transform: translateY(4em);
+            transform: translateY(4em);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @media screen and (max-width: 900px) {
   html {
     font-size: 40.5%;
@@ -205,6 +248,8 @@ nav .nav-box .x {
   padding-top: 4rem;
   font-size: 2.5rem;
   color: #15115b;
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
 }
 
 .burger {
@@ -232,7 +277,7 @@ nav .nav-box .x {
   display: -ms-flexbox;
   display: flex;
   direction: row;
-  height: 90vh;
+  height: 95vh;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -255,23 +300,28 @@ nav .nav-box .x {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  height: 95vh;
 }
 
 .hero .hero-text .header-main {
   width: 65%;
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
 }
 
 .hero .hero-text h1 {
   font-size: 6.5rem;
   color: #15115b;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
+  font-weight: 900;
 }
 
 .hero .hero-text p {
   font-size: 2.5rem;
   color: #15115b;
-  padding-bottom: 8rem;
+  padding-bottom: 7rem;
+  font-weight: 300;
+  line-height: 4rem;
 }
 
 .hero .hero-image {
@@ -281,7 +331,7 @@ nav .nav-box .x {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  height: 95vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #e8e7e9;
@@ -289,6 +339,8 @@ nav .nav-box .x {
 
 .hero .hero-image .image-container {
   position: relative;
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
 }
 
 .hero .hero-image .header-img {
@@ -384,12 +436,7 @@ nav .nav-box .x {
   padding: 4rem 0 4rem 0;
 }
 
-.work .recent-work h2 {
-  font-size: 6.5rem;
-  color: #fff;
-}
-
-.work .Nike-Run {
+.work .recent-work .work-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -402,8 +449,33 @@ nav .nav-box .x {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 19vh;
+}
+
+.work .recent-work h2 {
+  font-size: 6.5rem;
+  color: #fff;
+}
+
+.work .Nike-Run {
   height: 90vh;
   background-color: #f4b939;
+}
+
+.work .Nike-Run .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .work .Nike-Run .display-box {
@@ -451,6 +523,12 @@ nav .nav-box .x {
 }
 
 .work .Oc-group {
+  height: 120vh;
+  background-color: #5620f3;
+}
+
+.work .Oc-group .container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,8 +541,6 @@ nav .nav-box .x {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 120vh;
-  background-color: #5620f3;
 }
 
 .work .Oc-group .display-box {
@@ -514,6 +590,11 @@ nav .nav-box .x {
   padding: 4rem 0 4rem 0;
   width: 100%;
   height: 35vh;
+  text-align: center;
+}
+
+.discuss-project .container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,7 +607,6 @@ nav .nav-box .x {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
 }
 
 .discuss-project h2 {
@@ -563,9 +643,41 @@ nav .nav-box .x {
   color: #f4b939;
 }
 
+.about .about-us .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .about .newsletter {
   background-color: #e93061;
   color: #fff;
+}
+
+.about .newsletter .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .about .about-us,
@@ -615,6 +727,22 @@ footer {
   padding: 2rem 0 0 0;
   background-color: #15115b;
   color: #fff;
+}
+
+footer .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 55vh;
 }
 
 footer h2 {
@@ -857,6 +985,8 @@ footer a {
 }
 
 .projects .project {
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
   height: 50%;
   width: 50%;
   background-repeat: no-repeat;
@@ -888,16 +1018,22 @@ footer a {
 
 .projects .project .info-box h2 {
   color: #fff;
-  font-size: 6.5rem;
+  font-size: 3.5rem;
   padding: 0rem;
+  padding-bottom: 2rem;
+}
+
+.projects .project .info-box .light {
+  font-weight: 300;
+  font-size: 2rem;
 }
 
 .projects .project .info-box img {
   text-decoration: none;
   -webkit-filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg) brightness(114%) contrast(84%);
           filter: invert(19%) sepia(73%) saturate(3070%) hue-rotate(329deg) brightness(114%) contrast(84%);
-  width: 12rem;
-  height: 12rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .projects .project--1 {
@@ -920,6 +1056,8 @@ footer a {
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
   opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 @media (max-width: 1200px) {
@@ -1098,6 +1236,10 @@ footer a {
 .team {
   width: 100%;
   height: 50vh;
+}
+
+.team .container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1132,6 +1274,22 @@ footer a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 90%;
+}
+
+.team .members .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .team .members .member1 {
